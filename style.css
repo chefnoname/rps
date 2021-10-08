@@ -1,0 +1,282 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+section {
+  height: 100vh;
+  background-color: #843d4d;
+  font-family: "Poppins", sans-serif;
+}
+
+.score {
+  color: aliceblue;
+  height: 20vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.score h2 {
+  font-size: 30px;
+}
+
+.score p {
+  text-align: center;
+  padding: 10px;
+  font-size: 25px;
+}
+
+.intro {
+  color: aliceblue;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  transition: opacity 0.75s ease;
+}
+
+.intro h1 {
+  font-size: 50px;
+}
+
+.intro button,
+.match button {
+  width: 150px;
+  height: 50px;
+  background: none;
+  border: none;
+  color: aliceblue;
+  font-size: 20px;
+  background-color: rgb(39, 41, 68);
+  border-radius: 3px;
+  cursor: pointer;
+  outline: none;
+}
+
+.match button:hover {
+  transition: font-size 0.5s ease;
+  font-size: 200%;
+}
+
+.match {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: opacity 0.75s ease 0.5s;
+}
+
+.winner {
+  color: aliceblue;
+  text-align: center;
+  font-size: 50px;
+}
+
+.hands,
+.options {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.player-hand {
+  transform: rotateY(180deg);
+}
+
+div.fadeOut {
+  opacity: 0;
+  pointer-events: none;
+}
+
+div.fadeIn {
+  opacity: 1;
+  pointer-events: all;
+}
+
+@keyframes shakePlayer {
+  0% {
+    transform: rotateY(180deg) translateY(0px);
+  }
+  15% {
+    transform: rotateY(180deg) translateY(-50px);
+  }
+  25% {
+    transform: rotateY(180deg) translateY(0px);
+  }
+  35% {
+    transform: rotateY(180deg) translateY(-50px);
+  }
+  50% {
+    transform: rotateY(180deg) translateY(0px);
+  }
+  65% {
+    transform: rotateY(180deg) translateY(-50px);
+  }
+  75% {
+    transform: rotateY(180deg) translateY(0px);
+  }
+  85% {
+    transform: rotateY(180deg) translateY(-50px);
+  }
+  100% {
+    transform: rotateY(180deg) translateY(0px);
+  }
+}
+
+@keyframes shakeComputer {
+  0% {
+    transform: translateY(0px);
+  }
+  15% {
+    transform: translateY(-50px);
+  }
+  25% {
+    transform: translateY(0px);
+  }
+  35% {
+    transform: translateY(-50px);
+  }
+  50% {
+    transform: translateY(0px);
+  }
+  65% {
+    transform: translateY(-50px);
+  }
+  75% {
+    transform: translateY(0px);
+  }
+  85% {
+    transform: translateY(-50px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@media only screen and (min-width: 319px) and (max-width: 373px) {
+  .score {
+    color: aliceblue;
+    height: 20vh;
+    width: 50vh;
+  }
+
+  .score h2 {
+    font-size: 20px;
+  }
+
+  .score p {
+    font-size: 15px;
+  }
+
+  .intro h1 {
+    font-size: 18px;
+    width: 50vh;
+  }
+
+  .intro button,
+  .match button {
+    width: 100px;
+    height: 30px;
+    font-size: 15px;
+    margin-right: 50px;
+  }
+
+  .match {
+    left: 50%;
+  }
+
+  .winner {
+    margin-right: 50px;
+    font-size: 20px;
+  }
+
+  .options {
+    flex-direction: column;
+    margin-bottom: 10px;
+  }
+
+  .player-hand,
+  .computer-hand {
+    height: 90%;
+    width: 80%;
+    margin-right: 50px;
+  }
+
+  .rock,
+  .paper {
+    margin-bottom: 10px;
+  }
+
+  .rock,
+  .paper,
+  .scissors {
+    font-size: 10px;
+  }
+}
+
+@media only screen and (min-width: 374px) and (max-width: 400px) {
+  .score {
+    color: aliceblue;
+    height: 20vh;
+    width: 40vh;
+  }
+
+  .score h2 {
+    font-size: 20px;
+  }
+
+  .score p {
+    font-size: 15px;
+  }
+
+  .intro h1 {
+    font-size: 18px;
+    width: 40vh;
+    margin-left: 100px;
+  }
+
+  .intro button,
+  .match button {
+    width: 100px;
+    height: 30px;
+    font-size: 15px;
+    margin-right: 50px;
+  }
+
+  .match {
+    left: 50%;
+  }
+
+  .winner {
+    margin-right: 50px;
+    font-size: 20px;
+  }
+
+  .options {
+    flex-direction: column;
+    margin-bottom: 10px;
+  }
+
+  .player-hand,
+  .computer-hand {
+    height: 90%;
+    width: 80%;
+    margin-right: 50px;
+  }
+
+  .rock,
+  .paper {
+    margin-bottom: 10px;
+  }
+
+  .rock,
+  .paper,
+  .scissors {
+    font-size: 10px;
+  }
+}
